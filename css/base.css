@@ -1,0 +1,60 @@
+/* ============================
+    BASE — Variables, reset, tipografía
+   ============================ */
+
+:root {
+    --bg:       #0d0d14;
+    --surface:  #13131f;
+    --surface2: #1a1a2e;
+    --border:   #1e1e35;
+    --accent:   #7c3aed;
+    --accent2:  #06b6d4;
+    --text:     #e2e8f0;
+    --muted:    #94a3b8;
+    --radius:   12px;
+}
+
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    line-height: 1.6;
+}
+
+/* Fondo grid decorativo */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(124,58,237,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,58,237,.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+strong {
+    color: var(--text);
+}

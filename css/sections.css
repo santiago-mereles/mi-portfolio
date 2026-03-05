@@ -1,0 +1,146 @@
+/* ============================
+    SECTIONS — Estilos específicos de cada sección
+   ============================ */
+
+/* ── SECTION (base común) ── */
+.section {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px 60px;
+}
+
+.section__tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 12px;
+}
+
+.section__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 36px;
+    background: linear-gradient(135deg, #fff 40%, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── HERO ── */
+.hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero__greeting {
+    font-family: 'Space Mono', monospace;
+    font-size: .85rem;
+    color: var(--accent2);
+    margin-bottom: 12px;
+    letter-spacing: .1em;
+}
+
+.hero__name {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.05;
+    background: linear-gradient(135deg, #fff 50%, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+}
+
+.hero__role {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 32px;
+    max-width: 420px;
+}
+
+.hero__role--highlight {
+    color: var(--accent2);
+    font-weight: 600;
+}
+
+.hero__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ── ABOUT ── */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about__paragraph {
+    font-size: .95rem;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.about__data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ── SKILLS ── */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* ── PROJECTS ── */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ── CONTACT ── */
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.contact__text {
+    font-size: .95rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}

@@ -1,0 +1,94 @@
+/* ============================
+    RESPONSIVE — Mobile First
+    Breakpoints: 480px → 768px → 1024px
+   ============================ */
+
+/* ── 480px — Mobile grande ── */
+@media (min-width: 480px) {
+    .hero__name {
+        font-size: 3.8rem;
+    }
+
+    .skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero__cta {
+        flex-direction: row;
+    }
+}
+
+/* ── 768px — Tablet ── */
+@media (min-width: 768px) {
+    .nav {
+        padding: 18px 40px;
+    }
+
+    .nav__links {
+        gap: 32px;
+    }
+
+    .nav__logo,
+    .nav__link {
+        font-size: .85rem;
+    }
+
+    .section {
+        padding: 100px 24px 80px;
+    }
+
+    .section__title {
+        font-size: 2.4rem;
+        margin-bottom: 48px;
+    }
+
+    .hero {
+        padding: 100px 24px 60px;
+    }
+
+    .hero__name {
+        font-size: 4.8rem;
+    }
+
+    .hero__role {
+        font-size: 1.1rem;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    .skills {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+    }
+}
+
+/* ── 1024px — Desktop ── */
+@media (min-width: 1024px) {
+    .hero__name {
+        font-size: 5.5rem;
+    }
+
+    .section__title {
+        font-size: 2.8rem;
+    }
+
+    .skills {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

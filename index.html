@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Portfolio de Santiago Mereles, desarrollador frontend. Proyectos en HTML, CSS y JavaScript." />
+    <title>Mi Portfolio</title>
+    
+    <!-- Agregá estas dos líneas ANTES del link de fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+
+    <!-- CSS en orden: base → componentes → secciones → responsive -->
+    <link rel="stylesheet" href="css/base.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/components.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/sections.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'" />
+
+    <!-- Fallback para browsers sin JS -->
+    <noscript>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    </noscript>
+</head>
+<body>
+    <header>
+    <!-- NAV -->
+        <nav class="nav">
+            <div class="nav__logo">// santi.dev</div>
+            <div class="nav__links">
+            <a class="nav__link" href="#sobre-mi">Sobre mí</a>
+            <a class="nav__link" href="#habilidades">Skills</a>
+            <a class="nav__link" href="#proyectos">Proyectos</a>
+            <a class="nav__link" href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <p class="hero__greeting">Hola, soy</p>
+            <h1 class="hero__name">Santiago Mereles</h1>
+            <p class="hero__role">
+            Desarrollador <span class="hero__role--highlight">Frontend</span> en construcción.<br/>
+            Apasionado por crear interfaces bonitas y funcionales.
+            </p>
+            <div class="hero__cta">
+            <a href="#proyectos" class="btn btn--primary">Ver proyectos →</a>
+            <a href="#contacto" class="btn btn--outline">Contactame</a>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section class="section" id="sobre-mi">
+            <div class="reveal">
+            <p class="section__tag">// sobre mí</p>
+            <h2 class="section__title">¿Quién soy?</h2>
+            <div class="about">
+                <div class="about__text">
+                <p class="about__paragraph">Soy <strong>Santiago Daniel Mereles</strong>, estudiante de desarrollo web con foco en el <strong>frontend</strong>. Me apasiona construir interfaces que no solo se vean bien, sino que sean intuitivas y accesibles.</p>
+                <p class="about__paragraph">Actualmente estoy aprendiendo <strong>HTML, CSS y JavaScript</strong>, y planeo expandirme hacia React y el stack fullstack.</p>
+                </div>
+                <div class="about__data">
+                <div class="data-item">
+                    <span class="data-item__label">Ubicación</span>
+                    <span class="data-item__value">Argentina 🇦🇷</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-item__label">Enfoque</span>
+                    <span class="data-item__value">Frontend Dev</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-item__label">Estado</span>
+                    <span class="data-item__value">Aprendiendo 🚀</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-item__label">Disponible para</span>
+                    <span class="data-item__value">Proyectos & prácticas</span>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="section" id="habilidades">
+            <div class="reveal">
+            <p class="section__tag">// tecnologías</p>
+            <h2 class="section__title">Mi stack</h2>
+            <div class="skills">
+                <div class="skill-card">
+                <span class="skill-card__icon">🌐</span>
+                <span class="skill-card__name">HTML5</span>
+                <span class="skill-card__level">Intermedio</span>
+                </div>
+                <div class="skill-card">
+                <span class="skill-card__icon">🎨</span>
+                <span class="skill-card__name">CSS3</span>
+                <span class="skill-card__level">Intermedio</span>
+                </div>
+                <div class="skill-card">
+                <span class="skill-card__icon">⚡</span>
+                <span class="skill-card__name">JavaScript</span>
+                <span class="skill-card__level">Básico</span>
+                </div>
+                <div class="skill-card">
+                <span class="skill-card__icon">🐙</span>
+                <span class="skill-card__name">Git</span>
+                <span class="skill-card__level">Básico</span>
+                </div>
+                <div class="skill-card">
+                <span class="skill-card__icon">🐱</span>
+                <span class="skill-card__name">GitHub</span>
+                <span class="skill-card__level">Básico</span>
+                </div>
+                <div class="skill-card skill-card--soon">
+                <span class="skill-card__icon">⚛️</span>
+                <span class="skill-card__name">React</span>
+                <span class="skill-card__level">Próximamente</span>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="section" id="proyectos">
+            <div class="reveal">
+            <p class="section__tag">// trabajo</p>
+            <h2 class="section__title">Proyectos</h2>
+            <div class="projects">
+
+                <div class="project-card">
+                <span class="project-card__emoji">🌐</span>
+                <h3 class="project-card__title">Este Portfolio</h3>
+                <p class="project-card__desc">Mi primer proyecto real. Diseñado y construido desde cero con HTML, CSS y JS vanilla.</p>
+                <div class="project-card__tags">
+                    <span class="project-card__tag">HTML</span>
+                    <span class="project-card__tag">CSS</span>
+                    <span class="project-card__tag">JavaScript</span>
+                </div>
+                <div class="project-card__links">
+                    <a href="#" class="project-card__link">→ Ver código</a>
+                </div>
+                </div>
+
+                <div class="project-card project-card--placeholder">
+                <span class="project-card__plus">+</span>
+                <p class="project-card__soon">Próximo proyecto</p>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="section" id="contacto">
+            <div class="reveal">
+            <p class="section__tag">// hablemos</p>
+            <h2 class="section__title">Contacto</h2>
+            <div class="contact">
+                <div class="contact__info">
+                <p class="contact__text">¿Tenés un proyecto en mente, querés colaborar o simplemente charlar sobre tecnología? Mandame un mensaje.</p>
+                <div class="contact__socials">
+                    <a href="https://github.com/tu-usuario" class="social-link" target="_blank">
+                    <span class="social-link__icon">🐙</span>
+                    <span class="social-link__label">GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/tu-usuario" class="social-link" target="_blank">
+                    <span class="social-link__icon">💼</span>
+                    <span class="social-link__label">LinkedIn</span>
+                    </a>
+                    <a href="mailto:tu@email.com" class="social-link">
+                    <span class="social-link__icon">✉️</span>
+                    <span class="social-link__label">tu@email.com</span>
+                    </a>
+                </div>
+                </div>
+                <form class="contact__form" id="contact-form">
+                <div class="form-group">
+                    <label class="form-group__label" for="nombre">Nombre</label>
+                    <input class="form-group__input" type="text" id="nombre" placeholder="Juan García" required />
+                </div>
+                <div class="form-group">
+                    <label class="form-group__label" for="email">Email</label>
+                    <input class="form-group__input" type="email" id="email" placeholder="juan@email.com" required />
+                </div>
+                <div class="form-group">
+                    <label class="form-group__label" for="mensaje">Mensaje</label>
+                    <textarea class="form-group__textarea" id="mensaje" placeholder="Hola, quería consultarte sobre..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary">Enviar mensaje →</button>
+                </form>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Construido con ❤️ por Santiago Daniel Mereles💻🚀 · 2025</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
