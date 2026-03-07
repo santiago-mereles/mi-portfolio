@@ -103,6 +103,7 @@
 .skill-card__icon {
     width: 48px;
     height: 48px;
+    object-fit: contain;  /* mantiene las proporciones sin distorsionar */
 }
 
 .skill-card__name {
