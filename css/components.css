@@ -101,7 +101,8 @@
 }
 
 .skill-card__icon {
-    font-size: 1.8rem;
+    width: 48px;
+    height: 48px;
 }
 
 .skill-card__name {
@@ -211,7 +212,10 @@
     transform: translateX(4px);
 }
 
-.social-link__icon { font-size: 1.1rem; }
+.social-link__icon { 
+    width: 35px;
+    height: 48px;
+}
 
 /* ── FORM ── */
 .form-group {
