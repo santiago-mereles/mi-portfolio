@@ -10,33 +10,75 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
+    flex-wrap: wrap; /* permite que los links bajen en mobile */
+    padding: 1.6rem 2rem;
     background: rgba(13,13,20,.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
+    height: 6rem;
+    overflow: hidden; /* oculta el menú por defecto */
+    transition: height .3s ease;
+}
+
+/* Nav abierto — JS le agrega esta clase */
+.nav--open {
+    height: auto;
 }
 
 .nav__logo {
     font-family: 'Space Mono', monospace;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--accent2);
     letter-spacing: .05em;
 }
 
+/* ── BOTÓN HAMBURGUESA ── */
+.nav__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .4rem;
+    z-index: 101;
+}
+
+.nav__toggle-bar {
+    display: block;
+    width: 2.4rem;
+    height: .2rem;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .3s ease;
+    transform-origin: center;
+}
+
+/* ── LINKS ── */
 .nav__links {
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* mobile: apilados */
+    width: 100%;
+    gap: 0;
+    padding: 1.2rem 0 .8rem;
 }
 
 .nav__link {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--muted);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
     transition: color .2s;
 }
 
 .nav__link:hover {
     color: var(--text);
+}
+
+.nav__link:last-child {
+    border-bottom: none;
 }
 
 /* ── BOTONES ── */
@@ -281,18 +323,6 @@
     font-weight: 600;
 }
 
-/* ── REVEAL (animación scroll) ── */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .6s ease, transform .6s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* ── FOOTER ── */
 .footer {
     text-align: center;
@@ -309,4 +339,29 @@
     color: var(--muted);
 }
 
-/*Prueba de ejemplo*/
+/* --- Animaciones --- */
+/* ── REVEAL (animación scroll) ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación → X cuando está abierto */
+.nav--open .nav__toggle-bar:nth-child(1) {
+    transform: translateY(.7rem) rotate(45deg);
+}
+
+.nav--open .nav__toggle-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.nav--open .nav__toggle-bar:nth-child(3) {
+    transform: translateY(-.7rem) rotate(-45deg);
+}

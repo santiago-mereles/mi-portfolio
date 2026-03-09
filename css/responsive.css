@@ -21,15 +21,32 @@
 /* ── 768px — Tablet ── */
 @media (min-width: 768px) {
     .nav {
-        padding: 18px 40px;
+        height: 6rem; /* altura fija, nunca se expande */
+        overflow: visible;
+        flex-wrap: nowrap;
+        padding: 1.8rem 4rem;
+    }
+    
+    /* Ocultamos el botón hamburguesa en desktop */
+    .nav__toggle {
+        display: none;
     }
 
+     /* Links en fila como antes */
     .nav__links {
-        gap: 32px;
+        flex-direction: row;
+        width: auto;
+        gap: 3.2rem;
+        padding: 0;
     }
 
-    .nav__logo,
     .nav__link {
+        font-size: 1.4rem;
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .nav__logo {
         font-size: 1.36rem;
     }
 

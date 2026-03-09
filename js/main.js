@@ -2,6 +2,21 @@
 // MAIN — Lógica general del portfolio
 // ============================
 
+// ── Menú hamburguesa ──
+const navToggle = document.querySelector('#nav-toggle');
+const nav = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav--open')
+});
+
+// Cierra el menú al hacer click en un link
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('nav--open');
+    });
+});
+
 // ── Animación reveal on scroll ──
 const reveals = document.querySelectorAll('.reveal');
 

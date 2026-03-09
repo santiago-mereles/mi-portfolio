@@ -28,14 +28,22 @@
 </head>
 <body>
     <header>
-    <!-- NAV -->
         <nav class="nav">
             <div class="nav__logo">// santi.dev</div>
-            <div class="nav__links">
-            <a class="nav__link" href="#sobre-mi">Sobre mí</a>
-            <a class="nav__link" href="#habilidades">Skills</a>
-            <a class="nav__link" href="#proyectos">Proyectos</a>
-            <a class="nav__link" href="#contacto">Contacto</a>
+
+            <!-- Botón hamburguesa -->
+            <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="nav__links" id="nav-links">
+                <a class="nav__link" href="#sobre-mi">Sobre mí</a>
+                <a class="nav__link" href="#habilidades">Skills</a>
+                <a class="nav__link" href="#proyectos">Proyectos</a>
+                <a class="nav__link" href="#contacto">Contacto</a>
             </div>
         </nav>
     </header>
